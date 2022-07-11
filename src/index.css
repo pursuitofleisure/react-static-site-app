@@ -1,5 +1,86 @@
-main {
+* {
+   box-sizing: border-box;
+}
+
+:root {
+   --font-default: 'Inter', sans-serif;
+   --color-list: #61DAFB;
+}
+
+body {
+   margin: 0;
+   font-family: var(--font-default);
+   color: #fff;
+   background-color: #282D35;
+}
+
+h1,
+h2,
+h3 {
+   margin: 0;
+}
+
+h1 {
+   font-size: 40px;
+   font-weight: 700;
+}
+
+ul {
+   padding-left: 16px;
+}
+
+li {
+   line-height: 2.25;
+   font-size: 1.1rem;
+}
+
+li::marker {
+   color: var(--color-list);
+}
+
+.container {
    width: 100%;
    max-width: 550px;
+   padding: 0 27px;
    margin: 0 auto;
+}
+
+header {
+   background-color: #21222A;
+   padding: 30px 0;
+}
+
+section {
+   background: url(./reactjs-icon-2.png) right center no-repeat;
+   padding: 50px 0;
+}
+
+.header__nav {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header__logo {
+   display: flex;
+   align-items: center;
+   gap: 7px;
+}
+
+.header__title {
+   color: var(--color-list);
+   font-size: 23px;
+   font-weight: 700;
+   letter-spacing: -0.8px;
+}
+
+.header__project {
+   font-weight: 600;
+}
+
+@media (min-width: 430px) {
+   .header__nav {
+      flex-wrap: nowrap;
+   }
 }
